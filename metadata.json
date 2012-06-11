@@ -1,0 +1,23 @@
+{
+  "name": "jlust-stash",
+  "author": "jlust",
+  "description": "",
+  "license": "",
+  "project_page": "",
+  "source": "",
+  "summary": "",
+  "version": "",
+  "checksums": {
+    "Modulefile": "a56043bba399dbcf85c849f094074cc3",
+    "README": "5529004e1e1ab87ac0c78d3342da5012",
+    "README.md": "dccd10f1ab2312a06fdf61563c82ef94",
+    "files/db/postgresql-9.1-902.jdbc4.jar": "42b118950c660485a77dc7e79a8e06b1",
+    "manifests/init.pp": "ac1e1b004f70df41c36221f9aa4bb74c",
+    "spec/spec.opts": "a600ded995d948e393fbe2320ba8e51c",
+    "spec/spec_helper.rb": "ca19ec4f451ebc7fdb035b52eae6e909",
+    "templates/stash.properties.erb": "74601a2bc87a0e67f58e8221b4301c99",
+    "tests/Vagrantfile": "b82c01aa4eefb14594149c0e9b833d9b",
+    "tests/init.pp": "c6970e38a03241d9f60545470ed51a90"
+  },
+  "dependencies": []
+}

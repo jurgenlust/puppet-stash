@@ -118,6 +118,10 @@ class stash (
 		group => $user,
 		require => File[$stash_home],
 	}    
+	
+	class { "java7": }
+	
+	Class["java7"] -> Class["tomcat"]
 
 # the Tomcat instance
 	tomcat::webapp { $user:
@@ -133,7 +137,8 @@ class stash (
 		],
 		require => [
 			Class["tomcat"],
-			Package['git']	
+			Package['git'],
+			Class["java7"],	
 		]
 	}
 

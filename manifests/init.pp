@@ -29,6 +29,8 @@ class stash (
 	$contextroot = "stash",
 	$webapp_base = "/srv"
 ){
+	include java7
+
 # configuration
 	$stash_build = "atlassian-stash-${version}"	
 	$tarball = "${stash_build}.tar.gz"
@@ -118,8 +120,6 @@ class stash (
 		group => $user,
 		require => File[$stash_home],
 	}    
-	
-	class { "java7": }
 	
 	Class["java7"] -> Class["tomcat"]
 

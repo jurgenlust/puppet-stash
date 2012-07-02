@@ -73,12 +73,12 @@ class stash (
 		require => Tomcat::Webapp::User[$user],
 		creates => $downloaded_tarball,
 		timeout => 1200,	
+		notify => Exec['extract-stash']
 	}
 	
 	file { $downloaded_tarball :
 		require => Exec["download-stash"],
 		ensure => file,
-		notify => Exec['extract-stash']
 	}
 	
 # Extract the Stash archive

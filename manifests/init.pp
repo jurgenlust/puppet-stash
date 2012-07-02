@@ -78,6 +78,7 @@ class stash (
 	file { $downloaded_tarball :
 		require => Exec["download-stash"],
 		ensure => file,
+		notify => Exec['extract-stash']
 	}
 	
 # Extract the Stash archive
@@ -90,7 +91,8 @@ class stash (
 		require => [
 			File[$downloaded_tarball],
 			Tomcat::Webapp::Tomcat[$user],	
-		],	
+		],
+		notify => Tomcat::Webapp::Service[$user],	
 	}
 
 # the Stash war file

@@ -25,7 +25,7 @@ class stash (
 	$database_user = "stash",
 	$database_pass = "stash",
 	$number = 4,
-	$version = "1.1.1",
+	$version = "1.2.2",
 	$contextroot = "stash",
 	$webapp_base = "/srv"
 ){
